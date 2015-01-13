@@ -47,7 +47,7 @@ angular.module('starter.controllers', [])
 
             console.log($ionicHistory.currentView()); // todo: delete me
 
-            $scope.isOn = true;
+            $scope.isOn = false;
 
             $scope.turnOff = function () {
 
