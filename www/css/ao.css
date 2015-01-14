@@ -79,6 +79,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.photo-vashib {
+  background: url("../img/vashidab.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .photo-workstation {
   background: url("../img/workstation4.jpg");
   background-repeat: no-repeat;
@@ -193,6 +198,9 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
+
+.bar {
+  border: none; }
 
 .bar-footer {
   height: 100px;
