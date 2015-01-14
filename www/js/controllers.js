@@ -20,8 +20,8 @@ angular.module('starter.controllers', [])
 
         }])
     .controller('AppCtrl',
-    ['$scope', '$timeout', '$ionicLoading', '$ionicHistory', 'CacheService',
-        function ($scope, $timeout, $ionicLoading, $ionicHistory, CacheService) {
+    ['$scope', '$timeout', '$ionicLoading', '$ionicHistory', '$ionicPopup', 'CacheService',
+        function ($scope, $timeout, $ionicLoading, $ionicHistory, $ionicPopup, CacheService) {
 
             // cache the current view.
 
@@ -48,6 +48,7 @@ angular.module('starter.controllers', [])
             console.log($ionicHistory.currentView()); // todo: delete me
 
             $scope.isOn = false;
+            $scope.wifiOn = false;
 
             $scope.turnOff = function () {
 
@@ -84,6 +85,60 @@ angular.module('starter.controllers', [])
                 }, 3000);
 
             };
+
+            $scope.wifiToggle = function(){
+
+                $scope.wifiOn = !$scope.wifiOn;
+
+            };
+
+            $scope.$watch("wifiOn", function(newVal, oldVal){
+
+
+                if (newVal) {
+                    $ionicPopup.confirm({
+                        "title": "Wifi Pass Code",
+                        "template": "<div style='text-align: center'>Your Wifi pass code is:\n\n123456</div>",
+                        "buttons": [
+//                            {
+//                                "text": "Cancel",
+//                                "onTap": function (e) {
+//
+//                                    return false;
+//
+//                                }
+//
+//                            },
+                            {
+                                "text": "<b>Copy Pass Code</b>",
+                                "type": "button-positive",
+                                "onTap": function (e) {
+
+                                    return true;
+
+                                }
+                            }
+                        ]
+                    }).then(
+                        function (res) {
+
+                            var copy = res;
+
+                            if (copy) { // copy clicked
+
+
+                            }
+                            else { // cancel clicked
+
+
+                            }
+                        });
+                } else {
+                }
+
+            });
+
+
 
         }])
 

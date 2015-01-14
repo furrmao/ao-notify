@@ -65,6 +65,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'app.services'])
                 }
             })
 
+
+            .state('app.wifi', {
+                url: "/wifi",
+                views: {
+                    'appContent': {
+                        templateUrl: 'templates/wifi.html',
+                        controller: "AppCtrl"
+                    }
+                }
+            })
+
+            .state('app.jabber', {
+                url: "/jabber",
+                views: {
+                    'appContent': {
+                        templateUrl: 'templates/jabber.html',
+                        controller: "AppCtrl"
+                    }
+                }
+            })
+
+        ;
+
             // Each tab has its own nav history stack:
 
 //            .state('home', {

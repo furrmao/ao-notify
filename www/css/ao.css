@@ -84,6 +84,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.photo-wifi {
+  background: url("../img/wifi2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .name-container {
   padding: 15px;
   font-family: robotoregular;
@@ -101,6 +106,25 @@ body {
   position: absolute;
   bottom: 60px;
   margin-left: 60%;
+  width: 80px;
+  height: 80px;
+  background-color: #c2cd23;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 77px;
+  font-size: 40px;
+  color: white;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background-size: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); }
+
+.call-button-icon-two {
+  position: absolute;
+  bottom: 60px;
+  margin-left: 30%;
   width: 80px;
   height: 80px;
   background-color: #c2cd23;
